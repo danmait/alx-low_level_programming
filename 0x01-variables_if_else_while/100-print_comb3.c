@@ -19,13 +19,12 @@ int main(void)
 			putchar(48 + n);
 			putchar(48 + m);
 
-			if (m != 9 && n != 8)
+			if (!(m == 9 && n == 8))
 			{
 				putchar(',');
 				putchar(' ');
 			}
 		}
 	}
-	putchar('\n');
 	return (0);
 }
