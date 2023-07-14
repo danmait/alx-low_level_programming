@@ -12,9 +12,9 @@ int main(void)
 	for (n = 0; n < 16; n++)
 	{
 		if (n > 9)
-			putchar(87+n);
+			putchar(87 + n);
 		else
-			putchar(48+n);
+			putchar(48 + n);
 	}
 	putchar('\n');
 	return (0);
