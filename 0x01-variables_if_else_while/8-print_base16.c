@@ -14,7 +14,7 @@ int main(void)
 		if (n > 9)
 			putchar(87+n);
 		else
-			putchar(48+c);
+			putchar(48+n);
 	putchar('\n');
 	return (0);
 }
