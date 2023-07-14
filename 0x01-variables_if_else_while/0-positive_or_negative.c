@@ -9,10 +9,10 @@
 int main(void)
 {
 	int n;
+	char *sign;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	char *sign;
 
 	if (n == 0)
 		sign = "zero";
