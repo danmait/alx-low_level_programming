@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	long long n, i, lp;
+	long n, i, lp;
 
 	n = 612852475143;
 	lp = 1;
@@ -20,5 +20,6 @@ int main(void)
 			n /= i;
 		}
 	}
+	printf("%ld\n", lp);
 	return (0);
 }
