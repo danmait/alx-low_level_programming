@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
-* print_lines - print underscore n times
+* print_line - print underscore n times
 * @n: number of times to print underscore
 * Return: void
 */
 
-void print_lines(int n)
+void print_line(int n)
 {
 	while (n > 0)
 	{
