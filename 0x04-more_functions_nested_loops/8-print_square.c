@@ -15,7 +15,7 @@ void print_square(int size)
 	if (size < 1)
 		_putchar('\n');
 
-	while (i)
+	while (i > 0)
 	{
 		j = size;
 
@@ -27,4 +27,5 @@ void print_square(int size)
 		_putchar('\n');
 		i--;
 	}
+	_putchar('\n');
 }
