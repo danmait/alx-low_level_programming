@@ -1,34 +1,34 @@
+#include "main.h"
+
 /**
-* cap_string - capitalizes all words of a string
-* @str: the string
-* Return: the new string
-*/
-
-char *cap_string(char *str)
+ * cap_string - capitalizes everey word of a string
+ * @s: string to modify
+ *
+ * Return: the resulting string
+ */
+char *cap_string(char *s)
 {
-	int i, caps;
+	int i, j;
 
-	i = 0;
-	caps = 0;
+	char spe[13] = {' ', '\t', '\n', ',', ';', '.',
+		'!', '?', '"', '(', ')', '{', '}'};
 
-	while (str[i] != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (caps == 1)
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
+
+		for (j = 0; j < 13; j++)
 		{
-			caps = 0;
-
-			if (str[i] > 96 && str[i] < 123)
-				str[i] -= 32;
+			if (s[i] == spe[j])
+			{
+				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+				{
+					s[i + 1] -= 32;
+				}
+			}
 		}
-
-		if (str[i] == ' ' ||  str[i] == '\t' ||
-		str[i] == '\n' || str[i] == ',' || str[i] == ';' ||
-		str[i] == '.' || str[i] == '!' || str[i] == '?' ||
-		str[i] == '"' || str[i] == '(' || str[i] == ')' ||
-		str[i] == '{' || str[i] == '}')
-			caps = 1;
-
-		i++;
 	}
-	return (str);
+
+	return (s);
 }
