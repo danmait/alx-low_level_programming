@@ -4,7 +4,7 @@
 * main - prints this programs name
 * @argc: number of arguments
 * @argv: anaarray with all arguments
-* Return - Zero
+* Return: - Zero
 */
 
 int main(int argc __attribute__((unused)), char **argv)
